@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PagamentoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:52967/PagamentoService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:52967/PagamentoService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:52967/PagamentoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Dev.Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPagamentoService_obterCodigoReferencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:obterCodigoReferencia" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_obterCodigoReferencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obterCodigoReferenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_listarPagamentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarPagamentos" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_listarPagamentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarPagamentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_listarFormaPagamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarFormaPagamento" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_listarFormaPagamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarFormaPagamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_obterPagamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:obterPagamento" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_obterPagamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obterPagamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_consultaTID_InputMessage">
+    <wsdl:part name="parameters" element="tns:consultaTID" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_consultaTID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:consultaTIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_excluirPagamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:excluirPagamento" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_excluirPagamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:excluirPagamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_salvarRegistroPagamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:salvarRegistroPagamento" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_salvarRegistroPagamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:salvarRegistroPagamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_salvarRegistroFormaPagamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:salvarRegistroFormaPagamento" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_salvarRegistroFormaPagamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:salvarRegistroFormaPagamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_cancelarVenda_InputMessage">
+    <wsdl:part name="parameters" element="tns:cancelarVenda" />
+  </wsdl:message>
+  <wsdl:message name="IPagamentoService_cancelarVenda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cancelarVendaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPagamentoService">
+    <wsdl:operation name="obterCodigoReferencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPagamentoService/obterCodigoReferencia" message="tns:IPagamentoService_obterCodigoReferencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPagamentoService/obterCodigoReferenciaResponse" message="tns:IPagamentoService_obterCodigoReferencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarPagamentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPagamentoService/listarPagamentos" message="tns:IPagamentoService_listarPagamentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPagamentoService/listarPagamentosResponse" message="tns:IPagamentoService_listarPagamentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarFormaPagamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPagamentoService/listarFormaPagamento" message="tns:IPagamentoService_listarFormaPagamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPagamentoService/listarFormaPagamentoResponse" message="tns:IPagamentoService_listarFormaPagamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obterPagamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPagamentoService/obterPagamento" message="tns:IPagamentoService_obterPagamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPagamentoService/obterPagamentoResponse" message="tns:IPagamentoService_obterPagamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaTID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPagamentoService/consultaTID" message="tns:IPagamentoService_consultaTID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPagamentoService/consultaTIDResponse" message="tns:IPagamentoService_consultaTID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="excluirPagamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPagamentoService/excluirPagamento" message="tns:IPagamentoService_excluirPagamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPagamentoService/excluirPagamentoResponse" message="tns:IPagamentoService_excluirPagamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="salvarRegistroPagamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPagamentoService/salvarRegistroPagamento" message="tns:IPagamentoService_salvarRegistroPagamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPagamentoService/salvarRegistroPagamentoResponse" message="tns:IPagamentoService_salvarRegistroPagamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="salvarRegistroFormaPagamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPagamentoService/salvarRegistroFormaPagamento" message="tns:IPagamentoService_salvarRegistroFormaPagamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPagamentoService/salvarRegistroFormaPagamentoResponse" message="tns:IPagamentoService_salvarRegistroFormaPagamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelarVenda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPagamentoService/cancelarVenda" message="tns:IPagamentoService_cancelarVenda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPagamentoService/cancelarVendaResponse" message="tns:IPagamentoService_cancelarVenda_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPagamentoService" type="tns:IPagamentoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obterCodigoReferencia">
+      <soap:operation soapAction="http://tempuri.org/IPagamentoService/obterCodigoReferencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarPagamentos">
+      <soap:operation soapAction="http://tempuri.org/IPagamentoService/listarPagamentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarFormaPagamento">
+      <soap:operation soapAction="http://tempuri.org/IPagamentoService/listarFormaPagamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterPagamento">
+      <soap:operation soapAction="http://tempuri.org/IPagamentoService/obterPagamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaTID">
+      <soap:operation soapAction="http://tempuri.org/IPagamentoService/consultaTID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="excluirPagamento">
+      <soap:operation soapAction="http://tempuri.org/IPagamentoService/excluirPagamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="salvarRegistroPagamento">
+      <soap:operation soapAction="http://tempuri.org/IPagamentoService/salvarRegistroPagamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="salvarRegistroFormaPagamento">
+      <soap:operation soapAction="http://tempuri.org/IPagamentoService/salvarRegistroFormaPagamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarVenda">
+      <soap:operation soapAction="http://tempuri.org/IPagamentoService/cancelarVenda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PagamentoService">
+    <wsdl:port name="BasicHttpBinding_IPagamentoService" binding="tns:BasicHttpBinding_IPagamentoService">
+      <soap:address location="http://localhost:52967/PagamentoService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

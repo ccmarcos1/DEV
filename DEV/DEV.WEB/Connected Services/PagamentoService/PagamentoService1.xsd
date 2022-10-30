@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dev.Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dev.Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="REGISTROVENDA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CODIGOREFERENCIA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DATACANCELAMENTO" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATAHORA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IDPRODUTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INATIVA" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="QUANTIDADE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VALOR" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="REGISTROVENDA" nillable="true" type="tns:REGISTROVENDA" />
+  <xs:complexType name="ArrayOfREGISTROVENDA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="REGISTROVENDA" nillable="true" type="tns:REGISTROVENDA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfREGISTROVENDA" nillable="true" type="tns:ArrayOfREGISTROVENDA" />
+  <xs:complexType name="ArrayOfREGISTROFORMAPAGAMENTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="REGISTROFORMAPAGAMENTO" nillable="true" type="tns:REGISTROFORMAPAGAMENTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfREGISTROFORMAPAGAMENTO" nillable="true" type="tns:ArrayOfREGISTROFORMAPAGAMENTO" />
+  <xs:complexType name="REGISTROFORMAPAGAMENTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AUTHORIZATIONCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CARDBIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODIGOREFERENCIA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FORMADEPAGAMENTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="JSONRETURN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JSONVENDA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NSU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARCELAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RETURNCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RETURNMESSAGE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VALOR" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="REGISTROFORMAPAGAMENTO" nillable="true" type="tns:REGISTROFORMAPAGAMENTO" />
+</xs:schema>

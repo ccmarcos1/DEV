@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="devdb" Class="contextoDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=devdb;User ID=admin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="devdbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CLIENTE" Member="CLIENTE">
+    <Type Name="CLIENTE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CPF" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ENDERECO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NUMERO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ESTADO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DATAHORACRIACAO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USUARIO" Member="USUARIO">
+    <Type Name="USUARIO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="USUARIO" Member="USUARIO1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SENHA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DATACRIACAO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NIVEL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CARRO" Member="CARRO">
+    <Type Name="CARRO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MODELO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ANO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PLACA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FABRICANTE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TAMANHODOTANQUE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUTO" Member="PRODUTO">
+    <Type Name="PRODUTO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VALOR" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="QUANTIDADE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DATAHORACRIACAO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REGISTROFORMAPAGAMENTO" Member="REGISTROFORMAPAGAMENTO">
+    <Type Name="REGISTROFORMAPAGAMENTO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGOREFERENCIA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VALOR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PARCELAS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FORMADEPAGAMENTO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RETURNCODE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RETURNMESSAGE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NSU" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CARDBIN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AUTHORIZATIONCODE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JSONVENDA" Type="System.String" DbType="VarChar(900)" CanBeNull="true" />
+      <Column Name="JSONRETURN" Type="System.String" DbType="VarChar(900)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REGISTROVENDA" Member="REGISTROVENDA">
+    <Type Name="REGISTROVENDA">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPRODUTO" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QUANTIDADE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VALOR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DATAHORA" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TIPO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CODIGOREFERENCIA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="INATIVA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DATACANCELAMENTO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

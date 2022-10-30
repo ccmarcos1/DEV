@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="devdbConnectionString-Web.config Connection String" description="devdbConnectionString A Cadeia de Conexão usada em web.config pelo aplicativo para acessar o banco de dados." defaultValue="Data Source=.;Initial Catalog=devdb;User ID=admin;Password=123" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\anton\\source\\repos\\DEV\\Dev\.Service\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='devdbConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,7 @@
+C:\Users\anton\source\repos\DEV\Dev.Service\bin\Dev.Service.dll.config
+C:\Users\anton\source\repos\DEV\Dev.Service\bin\Dev.Service.dll
+C:\Users\anton\source\repos\DEV\Dev.Service\bin\Dev.Service.pdb
+C:\Users\anton\source\repos\DEV\Dev.Service\obj\Debug\Dev.Service.csprojAssemblyReference.cache
+C:\Users\anton\source\repos\DEV\Dev.Service\obj\Debug\Dev.Service.csproj.CoreCompileInputs.cache
+C:\Users\anton\source\repos\DEV\Dev.Service\obj\Debug\Dev.Service.dll
+C:\Users\anton\source\repos\DEV\Dev.Service\obj\Debug\Dev.Service.pdb

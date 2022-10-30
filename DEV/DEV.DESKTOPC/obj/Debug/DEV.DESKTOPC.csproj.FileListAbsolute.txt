@@ -1,0 +1,15 @@
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\bin\Debug\DEV.DESKTOPC.exe.config
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\bin\Debug\DEV.DESKTOPC.exe
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\bin\Debug\DEV.DESKTOPC.pdb
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\obj\Debug\DEV.DESKTOPC.csprojAssemblyReference.cache
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\obj\Debug\DEV.DESKTOPC.Form1.resources
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\obj\Debug\DEV.DESKTOPC.Properties.Resources.resources
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\obj\Debug\DEV.DESKTOPC.csproj.GenerateResource.cache
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\obj\Debug\DEV.DESKTOPC.csproj.CoreCompileInputs.cache
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\obj\Debug\DEV.DESKTOPC.exe
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\obj\Debug\DEV.DESKTOPC.pdb
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\obj\Debug\DEV.DESKTOPC.InicioForm.resources
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\obj\Debug\DEV.DESKTOPC.CadastroProdutoForm.resources
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\obj\Debug\DEV.DESKTOPC.RecebimentoProdutoForm.resources
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\obj\Debug\DEV.DESKTOPC.RelatorioVendasForm.resources
+C:\Users\anton\source\repos\DEV\DEV.DESKTOPC\obj\Debug\DEV.DESKTOPC.ProdutoForm.resources

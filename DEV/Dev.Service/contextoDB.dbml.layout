@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.375, 8.5" name="contextoDB">
+  <DataContextMoniker Name="/contextoDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a2119d9b-48e6-4a3d-bd94-044f97c782d3" absoluteBounds="0.5, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/contextoDBDataContext/CLIENTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b9ae7d5-5b2a-4a6d-b15e-cf078fcabb7a" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e2f7e4b-e8cd-4665-92ac-550d52308bca" absoluteBounds="0.5, 2.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/contextoDBDataContext/USUARIO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8af19b5-e8c3-49e5-9e1e-765391dfecc0" absoluteBounds="0.51499999999999968, 3.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4373366c-bebd-403f-945d-ccfbc437a314" absoluteBounds="4.375, 2.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/contextoDBDataContext/CARRO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9863a39e-e708-47f2-bf84-b750241108a0" absoluteBounds="4.3900000000000006, 3.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="37a5eb00-a6a9-4455-9051-6b81b861af11" absoluteBounds="4.375, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/contextoDBDataContext/PRODUTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62ada1f0-8e9d-4ede-8a8b-1d9edbe5d61e" absoluteBounds="4.39, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e69fe1d-6535-4466-a1c2-bfbc474a38c0" absoluteBounds="9.125, 3.375, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/contextoDBDataContext/REGISTROFORMAPAGAMENTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="523eeba5-ce80-43b0-861e-a943b9da77d1" absoluteBounds="9.14, 3.835, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9bd1e32-8ab8-43d4-890f-ff6173a39661" absoluteBounds="8.5, 0.625, 2, 2.5401025390625">
+      <DataClassMoniker Name="/contextoDBDataContext/REGISTROVENDA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91d28c30-2b84-45e1-85bf-ab36b973ef37" absoluteBounds="8.515, 1.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
