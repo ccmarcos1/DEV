@@ -33,10 +33,44 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp.Net2, Version=102.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.Net2.1.1.11\lib\net20\RestSharp.Net2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,10 +88,21 @@
     <Compile Include="CadastroProdutoForm.Designer.cs">
       <DependentUpon>CadastroProdutoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\PagamentoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ProdutoService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DetalheDeRecebimentoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalheDeRecebimentoForm.Designer.cs">
+      <DependentUpon>DetalheDeRecebimentoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -70,6 +115,13 @@
     </Compile>
     <Compile Include="InicioForm.Designer.cs">
       <DependentUpon>InicioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PagamentoRede.cs" />
+    <Compile Include="PagamentoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagamentoForm.Designer.cs">
+      <DependentUpon>PagamentoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ProdutoForm.cs">
       <SubType>Form</SubType>
@@ -94,11 +146,17 @@
     <EmbeddedResource Include="CadastroProdutoForm.resx">
       <DependentUpon>CadastroProdutoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DetalheDeRecebimentoForm.resx">
+      <DependentUpon>DetalheDeRecebimentoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InicioForm.resx">
       <DependentUpon>InicioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagamentoForm.resx">
+      <DependentUpon>PagamentoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProdutoForm.resx">
       <DependentUpon>ProdutoForm.cs</DependentUpon>
@@ -119,6 +177,22 @@
     <EmbeddedResource Include="RelatorioVendasForm.resx">
       <DependentUpon>RelatorioVendasForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\PagamentoService\DEV.DESKTOPC.PagamentoService.REGISTROFORMAPAGAMENTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PagamentoService\DEV.DESKTOPC.PagamentoService.REGISTROVENDA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PagamentoService\PagamentoService.wsdl" />
+    <None Include="Connected Services\PagamentoService\PagamentoService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PagamentoService\PagamentoService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PagamentoService\PagamentoService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ProdutoService\DEV.DESKTOPC.ProdutoService.PRODUTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -132,6 +206,7 @@
     <None Include="Connected Services\ProdutoService\ProdutoService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -149,6 +224,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\PagamentoService\" />
     <WCFMetadataStorage Include="Connected Services\ProdutoService\" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +286,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PagamentoService\PagamentoService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PagamentoService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PagamentoService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PagamentoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

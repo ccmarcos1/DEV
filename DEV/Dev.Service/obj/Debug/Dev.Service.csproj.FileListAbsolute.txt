@@ -5,3 +5,10 @@ C:\Users\anton\source\repos\DEV\Dev.Service\obj\Debug\Dev.Service.csprojAssembly
 C:\Users\anton\source\repos\DEV\Dev.Service\obj\Debug\Dev.Service.csproj.CoreCompileInputs.cache
 C:\Users\anton\source\repos\DEV\Dev.Service\obj\Debug\Dev.Service.dll
 C:\Users\anton\source\repos\DEV\Dev.Service\obj\Debug\Dev.Service.pdb
+C:\Users\anton\Documents\GitHub\DEV\DEV\Dev.Service\bin\Dev.Service.dll.config
+C:\Users\anton\Documents\GitHub\DEV\DEV\Dev.Service\bin\Dev.Service.dll
+C:\Users\anton\Documents\GitHub\DEV\DEV\Dev.Service\bin\Dev.Service.pdb
+C:\Users\anton\Documents\GitHub\DEV\DEV\Dev.Service\obj\Debug\Dev.Service.csprojAssemblyReference.cache
+C:\Users\anton\Documents\GitHub\DEV\DEV\Dev.Service\obj\Debug\Dev.Service.csproj.CoreCompileInputs.cache
+C:\Users\anton\Documents\GitHub\DEV\DEV\Dev.Service\obj\Debug\Dev.Service.dll
+C:\Users\anton\Documents\GitHub\DEV\DEV\Dev.Service\obj\Debug\Dev.Service.pdb

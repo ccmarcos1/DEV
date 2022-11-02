@@ -36,6 +36,7 @@
             this.txtValor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
+            this.LbID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Salvar
@@ -56,6 +57,7 @@
             this.btn_Cancelar.TabIndex = 1;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // txtNome
             // 
@@ -105,11 +107,20 @@
             this.txtQuantidade.Size = new System.Drawing.Size(54, 20);
             this.txtQuantidade.TabIndex = 6;
             // 
+            // LbID
+            // 
+            this.LbID.AutoSize = true;
+            this.LbID.Location = new System.Drawing.Point(136, 79);
+            this.LbID.Name = "LbID";
+            this.LbID.Size = new System.Drawing.Size(0, 13);
+            this.LbID.TabIndex = 8;
+            // 
             // ProdutoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(359, 181);
+            this.Controls.Add(this.LbID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.label2);
@@ -122,6 +133,7 @@
             this.Name = "ProdutoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Produto";
+            this.Load += new System.EventHandler(this.ProdutoForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +149,6 @@
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtQuantidade;
+        private System.Windows.Forms.Label LbID;
     }
 }

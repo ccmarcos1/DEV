@@ -16,5 +16,19 @@ namespace DEV.DESKTOPC
         {
             InitializeComponent();
         }
+
+        private void RelatorioVendasForm_Load(object sender, EventArgs e)
+        {
+            PagamentoService.PagamentoServiceClient service = new PagamentoService.PagamentoServiceClient();
+            dataGridView1.DataSource = service.listarPagamentos();
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            string CodigoReferencia = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            int IdProduto = Int32.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString());
+            Form f = new DetalheDeRecebimentoForm(CodigoReferencia, IdProduto);
+            f.Show();
+        }
     }
 }

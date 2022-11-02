@@ -28,17 +28,26 @@ namespace DEV.DESKTOPC
             dataGridView1.DataSource = produto.listarProdutos();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         
         private void btn_Novo_Click(object sender, EventArgs e)
         {
-            Form f = new ProdutoForm();
+            int IdProduto = -1;
+            Form f = new ProdutoForm(IdProduto);
             f.Show();
         }
 
- 
+  
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int IdProduto = Int32.Parse(dataGridView1.CurrentRow.Cells[1].Value.ToString());
+            Form f = new ProdutoForm(IdProduto);
+            f.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

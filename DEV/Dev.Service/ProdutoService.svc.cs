@@ -54,7 +54,7 @@ namespace Dev.Service
         {
             contextoDBDataContext context = new contextoDBDataContext();
             PRODUTO produto = null;
-            if (idProduto == -1)
+            if (idProduto == -1 || idProduto == 0)
             {
                 produto = new PRODUTO();
                 context.PRODUTO.InsertOnSubmit(produto);

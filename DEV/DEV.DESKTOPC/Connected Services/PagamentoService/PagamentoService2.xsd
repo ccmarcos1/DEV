@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52967/PagamentoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Dev.Service" />
+  <xs:element name="obterCodigoReferencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterCodigoReferenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dev.Service" minOccurs="0" name="obterCodigoReferenciaResult" nillable="true" type="q1:REGISTROVENDA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarPagamentos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarPagamentosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Dev.Service" minOccurs="0" name="listarPagamentosResult" nillable="true" type="q2:ArrayOfREGISTROVENDA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarFormaPagamento">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarFormaPagamentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Dev.Service" minOccurs="0" name="listarFormaPagamentoResult" nillable="true" type="q3:ArrayOfREGISTROFORMAPAGAMENTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterPagamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idReferencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterPagamentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Dev.Service" minOccurs="0" name="obterPagamentoResult" nillable="true" type="q4:REGISTROVENDA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultaTID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoReferencia" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultaTIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="consultaTIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="excluirPagamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idReferencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="excluirPagamentoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="salvarRegistroPagamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCodigoReferencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantidade" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="salvarRegistroPagamentoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="salvarRegistroFormaPagamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCodigoReferencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parcelas" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="formaPagamento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="returnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="returnMessage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nsu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cardbin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="authorizationCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="jsonvenda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="jsonreturn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="salvarRegistroFormaPagamentoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelarVenda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codreferencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelarVendaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
