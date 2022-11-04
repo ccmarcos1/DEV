@@ -171,7 +171,7 @@ namespace DEV.WEB
             //_pagamento.capture = true;
             _pagamento.kind = ddlFormaPagamento.SelectedValue;
             _pagamento.amount = lvalortotal.Text.ToString();
-            _pagamento.installmentes = ddlParcelas.SelectedValue;
+            _pagamento.installments = Int32.Parse(ddlParcelas.SelectedValue);
             //Dados do Cartao
             _pagamento.cardholderName = txtNome.Text;
             _pagamento.cardNumber = txtCardNumber.Text;
@@ -218,7 +218,7 @@ namespace DEV.WEB
                 int idProduto = getIdProduto();
                 service.salvarRegistroPagamento(_resultPayment.reference.ToString(), idProduto.ToString(), ddlFormaPagamento.SelectedValue, ddlQuantidade.SelectedItem.ToString(), lvalortotal.Text);
 
-                service.salvarRegistroFormaPagamento(_resultPayment.reference.ToString(), _resultPayment.amount.ToString(), _resultComprar.installmentes.ToString(), 
+                service.salvarRegistroFormaPagamento(_resultPayment.reference.ToString(), _resultPayment.amount.ToString(), _resultComprar.installments.ToString(), 
                     _resultComprar.kind.ToString(), _resultPayment.returnCode.ToString(), _resultPayment.returnMessage.ToString(), _resultPayment.tid.ToString(),
                     _resultPayment.nsu.ToString(), _resultPayment.cardBin.ToString(), _resultPayment.authorizationCode.ToString(), _resultComprar.ToString(), _resultPayment.ToString());
                 Response.Redirect("/detalheDeRecebimento.aspx?idReferencia=" + _resultPayment.reference.ToString() + "&idProduto=" + idProduto.ToString());

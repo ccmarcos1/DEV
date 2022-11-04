@@ -36,6 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cb_Quantidade = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cb_Formapagamento = new System.Windows.Forms.ComboBox();
@@ -53,7 +54,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btn_Confirmar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
-            this.cb_Quantidade = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -142,6 +142,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(649, 121);
             this.panel1.TabIndex = 14;
+            // 
+            // cb_Quantidade
+            // 
+            this.cb_Quantidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Quantidade.FormattingEnabled = true;
+            this.cb_Quantidade.Location = new System.Drawing.Point(184, 83);
+            this.cb_Quantidade.Name = "cb_Quantidade";
+            this.cb_Quantidade.Size = new System.Drawing.Size(62, 21);
+            this.cb_Quantidade.TabIndex = 23;
+            this.cb_Quantidade.SelectedIndexChanged += new System.EventHandler(this.cb_Quantidade_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -316,15 +326,6 @@
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = false;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
-            // 
-            // cb_Quantidade
-            // 
-            this.cb_Quantidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Quantidade.FormattingEnabled = true;
-            this.cb_Quantidade.Location = new System.Drawing.Point(184, 83);
-            this.cb_Quantidade.Name = "cb_Quantidade";
-            this.cb_Quantidade.Size = new System.Drawing.Size(62, 21);
-            this.cb_Quantidade.TabIndex = 23;
             // 
             // PagamentoForm
             // 

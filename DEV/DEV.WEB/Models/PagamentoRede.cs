@@ -12,7 +12,7 @@ namespace DEV.WEB.Models
         //Dados da pagamento
         public string kind { get; set; }
         public string amount { get; set; }
-        public string installmentes { get; set; }
+        public int installments { get; set; }
 
         //Dados do Cartao
         public string cardholderName { get; set; }

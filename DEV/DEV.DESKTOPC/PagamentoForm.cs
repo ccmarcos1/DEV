@@ -35,14 +35,14 @@ namespace DEV.DESKTOPC
                 cb_parcela.Items.Add( "2");
                 cb_parcela.Items.Add("3");
                 cb_parcela.Items.Add( "4");
-                cb_parcela.Items.Add("5x");
-                cb_parcela.Items.Add("6x");
-                cb_parcela.Items.Add("7x");
-                cb_parcela.Items.Add("8x");
-                cb_parcela.Items.Add("9x");
-                cb_parcela.Items.Add("10x");
-                cb_parcela.Items.Add("11x");
-                cb_parcela.Items.Add("12x");
+                cb_parcela.Items.Add("5");
+                cb_parcela.Items.Add("6");
+                cb_parcela.Items.Add("7");
+                cb_parcela.Items.Add("8");
+                cb_parcela.Items.Add("9");
+                cb_parcela.Items.Add("10");
+                cb_parcela.Items.Add("11");
+                cb_parcela.Items.Add("12");
             }
             else if (cb_Formapagamento.Text == "debit")
             {
@@ -51,6 +51,20 @@ namespace DEV.DESKTOPC
                 cb_parcela.Items.Add("0");
             }
         }
+        private void QuantidadeEstoque()
+        {
+            ProdutoService.ProdutoServiceClient service = new ProdutoService.ProdutoServiceClient();
+            var produtos = service.obterProduto(idProduto);
+            for (int i = 1; i <= produtos.QUANTIDADE; i++)
+            {
+                if(cb_Quantidade.Text == i.ToString())
+                {
+                    var valor = produtos.VALOR * i;
+                    txtValor.Text = valor.ToString();
+                }              
+            }           
+        }
+
             private void PagamentoForm_Load(object sender, EventArgs e)
         {
             ProdutoService.ProdutoServiceClient service = new ProdutoService.ProdutoServiceClient();
@@ -60,8 +74,8 @@ namespace DEV.DESKTOPC
                 txtNome.Text = produtos.NOME.ToString();
                 txtValor.Text = produtos.VALOR.ToString();
 
-                for(int i=1; i <= produtos.QUANTIDADE; i++)
-                {
+                for (int i = 1; i <= produtos.QUANTIDADE; i++)
+                {                  
                     cb_Quantidade.Items.Add(i);
                 }
             }
@@ -112,7 +126,8 @@ namespace DEV.DESKTOPC
             //_pagamento.capture = true;
             _pagamento.kind = cb_Formapagamento.Text; 
             _pagamento.amount = txtValor.Text.ToString();
-            _pagamento.installmentes = cb_parcela.Text;
+            
+            _pagamento.installments = Int32.Parse(cb_parcela.Text.ToString());
             //Dados do Cartao
             _pagamento.cardholderName = txtNomeR.Text;
             _pagamento.cardNumber = txtCard.Text;
@@ -160,7 +175,7 @@ namespace DEV.DESKTOPC
                 //int idProduto = getIdProduto();
                 service.salvarRegistroPagamento(_resultPayment.reference.ToString(), idProduto.ToString(), cb_Formapagamento.Text, cb_Quantidade.Text, txtValor.Text);
 
-                service.salvarRegistroFormaPagamento(_resultPayment.reference.ToString(), _resultPayment.amount.ToString(), _resultComprar.installmentes.ToString(),
+                service.salvarRegistroFormaPagamento(_resultPayment.reference.ToString(), _resultPayment.amount.ToString(), _resultComprar.installments.ToString(),
                     _resultComprar.kind.ToString(), _resultPayment.returnCode.ToString(), _resultPayment.returnMessage.ToString(), _resultPayment.tid.ToString(),
                     _resultPayment.nsu.ToString(), _resultPayment.cardBin.ToString(), _resultPayment.authorizationCode.ToString(), _resultComprar.ToString(), _resultPayment.ToString());
                 //Respo.Redirect("/detalheDeRecebimento.aspx?idReferencia=" + _resultPayment.reference.ToString() + "&idProduto=" + idProduto.ToString());
@@ -176,6 +191,11 @@ namespace DEV.DESKTOPC
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cb_Quantidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            QuantidadeEstoque();
         }
     }
 }
